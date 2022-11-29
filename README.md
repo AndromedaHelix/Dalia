@@ -1,2 +1,2 @@
-# Online-3DPrint
+# Dalia
 A robust and simple application to deploy files online to a 3D printer
