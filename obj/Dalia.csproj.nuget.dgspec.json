@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/juanpablogutierrez/Documents/Escuela/Online-3DPrint/Online-3DPrint.csproj": {}
+    "/Users/juanpablogutierrez/Documents/Escuela/Dalia/Dalia.csproj": {}
   },
   "projects": {
-    "/Users/juanpablogutierrez/Documents/Escuela/Online-3DPrint/Online-3DPrint.csproj": {
+    "/Users/juanpablogutierrez/Documents/Escuela/Dalia/Dalia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/juanpablogutierrez/Documents/Escuela/Online-3DPrint/Online-3DPrint.csproj",
-        "projectName": "Online-3DPrint",
-        "projectPath": "/Users/juanpablogutierrez/Documents/Escuela/Online-3DPrint/Online-3DPrint.csproj",
+        "projectUniqueName": "/Users/juanpablogutierrez/Documents/Escuela/Dalia/Dalia.csproj",
+        "projectName": "Dalia",
+        "projectPath": "/Users/juanpablogutierrez/Documents/Escuela/Dalia/Dalia.csproj",
         "packagesPath": "/Users/juanpablogutierrez/.nuget/packages/",
-        "outputPath": "/Users/juanpablogutierrez/Documents/Escuela/Online-3DPrint/obj/",
+        "outputPath": "/Users/juanpablogutierrez/Documents/Escuela/Dalia/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/juanpablogutierrez/.nuget/NuGet/NuGet.Config"
