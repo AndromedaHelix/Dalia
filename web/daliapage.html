@@ -26,20 +26,7 @@
       text-align: center;
       color: rgb(96, 96, 96);
       margin-top: 15px;
-    }
-
-    .upload-button {
-      background-color: rgb(4, 157, 228);
-      color: white;
-      border-radius: 18px;
-      border: none;
-      border-color: rgb(48, 48, 48);
-      padding: 10px;
-      cursor: pointer;
-      margin-right: 8px;
-      font-weight: bold;
-      font-size: 15px;
-      transition: opacity 0.15s, box-shadow 0.15s;
+      margin-bottom: 15px;
     }
 
     .submit-button {
@@ -56,11 +43,6 @@
       transition: opacity 0.15s, box-shadow 0.15s;
     }
 
-    .upload-button:hover {
-      opacity: 0.7;
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-    }
-
     .submit-button:hover {
       opacity: 0.7;
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
@@ -73,14 +55,90 @@
     .submit-button:active {
       opacity: 0.4;
     }
+
+    input {
+      display: none;
+    }
+
+    label {
+      font-family: Arial;
+      display: inline-block;
+      vertical-align: center;
+      text-align: center;
+      padding-left: 150px;
+      padding-right: 150px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      border-radius: 6px;
+      border: 1px dashed #999;
+    }
+
+    label:hover {
+      color: #de0611;
+      border: 1px dashed #de0611;
+    }
+
+    .file-paragraph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .file-uploader-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body>
   <p class="title"> Dalia Gcode uploader</p>
   <p class="subtitle">Select a file to upload</p>
-  <button class="upload-button">Upload gcode file</button>
-  <button class="submit-button">Submit</button>
+  <div class="file-uploader-div">
+    <input type="file" id="file-input" accept=".gcode" />
+    <label for="file-input">Upload Gcode</label>
+  </div>
+
+  <p id="file-name" class="file-paragraph"></p>
+
+  <div class="button-div">
+    <button class="submit-button" id="submit-button">Submit</button>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('file-input');
+    const fileName = document.getElementById('file-name');
+    const uploadButton = document.getElementById('submit-button');
+
+    fileInput.addEventListener('change', function () {
+      const file = fileInput.files[0];
+      if (file) {
+        fileName.textContent = "File uploaded: " + file.name;
+        uploadButton.disabled = false;
+      } else {
+        fileName.textContent = '';
+        uploadButton.disabled = true;
+      }
+    });
+
+    uploadButton.addEventListener('click', function () {
+      const file = fileInput.files[0];
+      if (file) {
+        // You can perform file upload or further processing here
+        console.log(`Uploading ${file.name}...`);
+      }
+    });
+  </script>
+
 </body>
 
 </html>
