@@ -123,19 +123,20 @@
       const file = fileInput.files[0];
       if (file) {
         fileName.textContent = "File uploaded: " + file.name;
-        uploadButton.disabled = false;
       } else {
-        fileName.textContent = '';
-        uploadButton.disabled = true;
+        fileName.textContent = 'Failed to upload file';
       }
     });
 
     uploadButton.addEventListener('click', function () {
       const file = fileInput.files[0];
-      if (file) {
-        // You can perform file upload or further processing here
-        console.log(`Uploading ${file.name}...`);
-      }
+
+      const reader = new FileReader();
+      reader.onload = function () {
+        const contents = reader.result;
+        console.log('File contents:', contents);
+      };
+      reader.readAsText(file);
     });
   </script>
 
