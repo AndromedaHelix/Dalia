@@ -5,19 +5,19 @@ try:
 except:
   import socket
 
-from machine import Pin
 import network
-
-import main_page
-
 import esp
+import gc
+from main_page import *
+from machine import Pin
+
+
 esp.osdebug(None)
 
-import gc
 gc.collect()
 
-ssid = '' #COMPLETE WITH YOUR WIFI SSID
-password = ''#COMPLETE WITH YOUR WIFI PASSWORD
+ssid = 'GtzGarcia'
+password = 'casa2022'
 
 station = network.WLAN(network.STA_IF)
 station.active(True)
@@ -31,5 +31,4 @@ while station.isconnected() == False:
 print('Connection successful')
 print(station.ifconfig())
 
-led = Pin(2, Pin.OUT)
-
+runMain()
