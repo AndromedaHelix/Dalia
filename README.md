@@ -7,6 +7,10 @@ A robust and simple application to deploy files online to a 3D printer through a
 ## PCB
 A simple pcb layout design is in the works in order to provide a more easy to use experience, you will be able to easily order it and make it at home. 
 
+## Instructions
+
+Download the boot.py and main_page.py file and load them onto the esp32 or rasperry pi pico
+
 ## Authors
 
 * **Juan Pablo Gutiérrez** - [AndromedaHelix](https://github.com/AndromedaHelix)
